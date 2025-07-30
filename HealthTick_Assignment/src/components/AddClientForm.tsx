@@ -10,7 +10,7 @@ const AddClientForm = ({ setIsAddClientOpen }: any) => {
     const saveData = async () => {
         try {
 
-            const response = await fetch(`${BACKEND_URL}/addClient`, {
+            const response = await fetch(`${BACKEND_URL}addClient`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

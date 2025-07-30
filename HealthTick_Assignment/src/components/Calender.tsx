@@ -26,7 +26,7 @@ export default function Calendar({
 
   const getClients = async () => {
     try {
-      const response = await fetch(`${BACKEND_URL}/getClients`);
+      const response = await fetch(`${BACKEND_URL}getClients`);
       const data = await response.json();
       setClients(data);
     } catch (error) {
@@ -62,7 +62,7 @@ export default function Calendar({
   const bookCall = async () => {
 
     try {
-      await fetch(`${BACKEND_URL}/bookSlot`, {
+      await fetch(`${BACKEND_URL}bookSlot`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

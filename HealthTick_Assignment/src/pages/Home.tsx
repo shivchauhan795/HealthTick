@@ -32,7 +32,7 @@ const Home = () => {
     const date = format(currentDate, 'EEE dd LLL');
 
     const getData = async () => {
-        const response = await fetch(`${BACKEND_URL}/checkSlots?date=${currentDate.toISOString().split('T')[0]}`);
+        const response = await fetch(`${BACKEND_URL}checkSlots?date=${currentDate.toISOString().split('T')[0]}`);
         const data = await response.json();
         console.log(data);
         setAvailableSlots(data.availableSlots);
@@ -47,7 +47,7 @@ const Home = () => {
     const handleDeleteSlot = async (id: string) => {
         try {
 
-            const response = await fetch(`${BACKEND_URL}/deleteSlot/${id}`, {
+            const response = await fetch(`${BACKEND_URL}deleteSlot/${id}`, {
                 method: 'DELETE',
             });
             const data = await response.json();
