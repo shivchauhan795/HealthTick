@@ -62,7 +62,7 @@ export default function Calendar({
   const bookCall = async () => {
 
     try {
-      const response = await fetch(`${BACKEND_URL}/bookSlot`, {
+      await fetch(`${BACKEND_URL}/bookSlot`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

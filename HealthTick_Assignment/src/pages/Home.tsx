@@ -15,7 +15,7 @@ type Slot = {
 const Home = () => {
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
     const [currentDate, setCurrentDate] = useState(new Date());
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [selectedDate] = useState(new Date());
     const [availableSlots, setAvailableSlots] = useState([]);
     const [bookedSlots, setBookedSlots] = useState<Slot[]>([]);
     const [isAddClientOpen, setIsAddClientOpen] = useState(false);
